@@ -1,0 +1,9 @@
+ultralytics>=8.1
+torch>=2.0
+fastapi>=0.104
+uvicorn[standard]>=0.24
+python-multipart
+pycocotools>=2.0
+opencv-python-headless>=4.8
+numpy
+onnxruntime-gpu>=1.16
