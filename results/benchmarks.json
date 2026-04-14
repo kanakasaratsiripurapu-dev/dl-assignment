@@ -1,0 +1,58 @@
+{
+  "yolov8n_pt": {
+    "speed": {
+      "n": 5,
+      "mean_ms": 61.39,
+      "med_ms": 60.95,
+      "p95_ms": 64.61,
+      "fps": 16.3,
+      "total_dets": 0
+    },
+    "accuracy": {
+      "map50": 0.6052,
+      "map50_95": 0.4461
+    }
+  },
+  "yolov8s_pt": {
+    "speed": {
+      "n": 5,
+      "mean_ms": 128.58,
+      "med_ms": 129.53,
+      "p95_ms": 132.92,
+      "fps": 7.8,
+      "total_dets": 0
+    },
+    "accuracy": {
+      "map50": 0.7597,
+      "map50_95": 0.589
+    }
+  },
+  "yolov8n_onnx": {
+    "speed": {
+      "n": 5,
+      "mean_ms": 48.66,
+      "med_ms": 48.76,
+      "p95_ms": 49.58,
+      "fps": 20.5,
+      "total_dets": 0
+    },
+    "accuracy": {
+      "map50": 0.6061,
+      "map50_95": 0.4537
+    }
+  },
+  "yolov8s_onnx": {
+    "speed": {
+      "n": 5,
+      "mean_ms": 125.64,
+      "med_ms": 125.46,
+      "p95_ms": 126.6,
+      "fps": 8.0,
+      "total_dets": 0
+    },
+    "accuracy": {
+      "map50": 0.7725,
+      "map50_95": 0.5973
+    }
+  }
+}
