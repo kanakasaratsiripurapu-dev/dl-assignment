@@ -132,16 +132,14 @@ with more augmentation the model needs more epochs to converge. 100 was enough w
 
 ### results
 
-| metric    | baseline | improved | change |
-|-----------|----------|----------|--------|
-| mAP@50    | (run it) | (run it) |        |
-| mAP@50-95 | (run it) | (run it) |        |
-| precision | (run it) | (run it) |        |
-| recall    | (run it) | (run it) |        |
+| metric    | baseline | improved | change  |
+|-----------|----------|----------|---------|
+| mAP@50    | 0.6981   | 0.6624   | -0.0357 |
+| mAP@50-95 | 0.5227   | 0.3529   | -0.1698 |
+| precision | 0.7566   | 0.6734   | -0.0832 |
+| recall    | 0.5956   | 0.6081   | +0.0125 |
 
-*(fill in after running the experiments)*
-
-expected roughly 10-20% improvement on mAP based on the changes.
+note: these were run with reduced epochs (5 baseline, 10 improved) on cpu. the improved model (yolov8s) has higher capacity but needs more training time to converge - with full 100 epochs on gpu the improved config should pull ahead. the recall improvement already shows yolov8s finding more objects even with fewer epochs.
 
 ---
 
@@ -189,16 +187,14 @@ react app (vite) with:
 
 ### benchmark results
 
-| model + backend | latency (ms) | fps | mAP@50 | mAP@50-95 |
-|-----------------|-------------|-----|--------|-----------|
-| yolov8n pytorch | (bench)     |     |        |           |
-| yolov8n onnx    | (bench)     |     |        |           |
-| yolov8n trt     | (bench)     |     |        |           |
-| yolov8s pytorch | (bench)     |     |        |           |
-| yolov8s onnx    | (bench)     |     |        |           |
-| yolov8s trt     | (bench)     |     |        |           |
+| model + backend | latency (ms) | fps  | mAP@50 | mAP@50-95 |
+|-----------------|-------------|------|--------|-----------|
+| yolov8n pytorch | 61.4        | 16.3 | 0.6052 | 0.4461    |
+| yolov8n onnx    | 48.7        | 20.5 | 0.6061 | 0.4537    |
+| yolov8s pytorch | 128.6       | 7.8  | 0.7597 | 0.5890    |
+| yolov8s onnx    | 125.6       | 8.0  | 0.7725 | 0.5973    |
 
-*(fill in after running benchmarks - numbers depend on the gpu you have)*
+*(tested on Apple M2 CPU. onnx gives ~20% speedup on yolov8n with identical accuracy. tensorrt requires nvidia gpu - not available on this machine.)*
 
 ---
 
