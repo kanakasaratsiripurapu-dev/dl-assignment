@@ -1,0 +1,20 @@
+{
+  "yolov8n": {
+    "onnx": {
+      "path": "yolov8n.onnx",
+      "took": 24.0
+    },
+    "trt": {
+      "err": "Invalid CUDA 'device=0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.\n\ntorch.cuda.is_available(): False\ntorch.cuda.device_count(): 0\nos.environ['CUDA_VISIBLE_DEVICES']: -1\nSee https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.\n"
+    }
+  },
+  "yolov8s": {
+    "onnx": {
+      "path": "yolov8s.onnx",
+      "took": 0.9
+    },
+    "trt": {
+      "err": "Invalid CUDA 'device=0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.\n\ntorch.cuda.is_available(): False\ntorch.cuda.device_count(): 0\nos.environ['CUDA_VISIBLE_DEVICES']: -1\nSee https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.\n"
+    }
+  }
+}
